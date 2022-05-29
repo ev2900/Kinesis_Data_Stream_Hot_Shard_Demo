@@ -1,1 +1,1 @@
-# Kinesis_Data_Stream_CloudWatch
+# Kinesis Data Stream CloudWatch
