@@ -31,9 +31,10 @@ for message in range(0, numberOfMessagesToSend):
 		StreamName = kinesisDataStreamName,
 		Data = json.dumps(messageBody),
 		PartitionKey = str(hash(range(0,1))),
-		# ExplicitHashKey = "1" # shard 0
+		ExplicitHashKey = "1" # shard 0
 		# ExplicitHashKey = "113427455640312821154458202477256070486" # shard 1
 		# ExplicitHashKey = "226854911280625642308916404954512140971" # shard 2
+		# ...
 	)
 
 	print("Message # " + str(counter) + " sent to " + str(response['ShardId']))
