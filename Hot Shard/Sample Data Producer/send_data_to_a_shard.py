@@ -11,7 +11,7 @@ import boto3
 client = boto3.client('kinesis')
 
 # Set kinesis stream name variable
-kinesisDataStreamName = "hot-shard-demo"
+kinesisDataStreamName = "hot-shard-data-stream"
 
 # Set number of messages to send variable
 numberOfMessagesToSend = 10
