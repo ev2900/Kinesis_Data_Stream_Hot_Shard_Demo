@@ -1,0 +1,25 @@
+Description: Kinesis + Cloud9
+
+Resources:
+  # Kinesis Data Stream
+  Type: AWS::Kinesis::Stream
+  Properties: 
+    Name: 'hot-shard-data-stream'
+    RetentionPeriodHours: 24
+    ShardCount: 4
+
+  # Cloud9
+  Cloud9:
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties:
+      Name: 'kinesis-cloud9'
+      Description: 'Cloud9 development enviorment'
+      ImageId: 'amazonlinux-2-x86_64'
+      InstanceType: 't2.large'
+      AutomaticStopTimeMinutes: '30'
+      Repositories: [
+        {
+          "PathComponent" : '/Kinesis_Data_Stream_Monitoring',
+          "RepositoryUrl" : 'https://github.com/ev2900/Kinesis_Data_Stream_Monitoring.git'
+        }
+      ]
