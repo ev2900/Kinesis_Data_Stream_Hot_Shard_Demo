@@ -3,5 +3,14 @@ A demo that will intially deploy a Kinesis data stream with 4 shards and sample 
 
 ## Instructions
 
-1. Deploy CloudFormation
+1. Deploy CloudFormation for Kinesis + Cloud9
 
+*Cloudformation Button*
+
+The CloudFormation will deploy the following architecture
+
+*Architecture*
+
+2. Enable enhanced shard-level metrics on the Kinesis data stream
+
+*Instructions*
