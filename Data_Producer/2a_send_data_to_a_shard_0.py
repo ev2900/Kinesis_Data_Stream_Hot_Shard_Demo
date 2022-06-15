@@ -1,11 +1,28 @@
-# Install boto3
-'''
-	pip install boto3
-'''
+# ---------------
+# If required ...
+# 
+# pip install boto3
+# pip install json
+# pip install time
+# pip install random
+#
+# ---------------
 
 # Import req. libraries
 import json
 import boto3
+import time
+import random
+
+# Configure a permanent session
+client = boto3.client(
+	'kinesis',
+	aws_access_key_id="<access_key_id>",
+    aws_secret_access_key="<secret_key_id>"
+)
+
+# Set hash value for messages
+hashkeyvalue = "1"
 
 # Create a kinesis client
 client = boto3.client('kinesis')
@@ -14,7 +31,7 @@ client = boto3.client('kinesis')
 kinesisDataStreamName = "hot-shard-data-stream"
 
 # Set number of messages to send variable
-numberOfMessagesToSend = 10
+numberOfMessagesToSend = 1000000
 
 # Create the message that will be send to Kinesis
 messageBody = {
@@ -31,15 +48,14 @@ for message in range(0, numberOfMessagesToSend):
 		StreamName = kinesisDataStreamName,
 		Data = json.dumps(messageBody),
 		PartitionKey = str(hash(range(0,1))),
-		ExplicitHashKey = "1" # shard 0
-		# ExplicitHashKey = "113427455640312821154458202477256070486" # shard 1
-		# ExplicitHashKey = "226854911280625642308916404954512140971" # shard 2
-		# ...
+		ExplicitHashKey = hashkeyvalue # shard 0 | HOT SHARD
 	)
 
 	print("Message # " + str(counter) + " sent to " + str(response['ShardId']))
 	
 	counter = counter + 1
+	
+	time.sleep(random.uniform(2, 5))
 
 	# If the message was not sucssfully sent print an error message
 	if response['ResponseMetadata']['HTTPStatusCode'] != 200:
