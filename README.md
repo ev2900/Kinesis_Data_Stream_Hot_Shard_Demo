@@ -1,2 +1,2 @@
 # Kinesis Data Stream CloudWatch
-Created a CloudWatch dashboard that will graph the per-shard incoming message count for Kinesis - assuming you have enable enhanced metrics for the Kinesis data stream in question.
+A demo that will intially deploy a Kinesis data stream with 4 shards and sample python scripts run in Cloud9 that purposly send a higher volume of messages to a single shard on Kinesis. This sets up a scenario with where a Kinesis data stream has a *hot* shard. Subseqently you enable enhanced monitoring on the Kinesis data stream and deploy a CloudWatch dashboard to identify the *hot* shard
