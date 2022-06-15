@@ -2,11 +2,12 @@ Description: Kinesis + Cloud9
 
 Resources:
   # Kinesis Data Stream
-  Type: AWS::Kinesis::Stream
-  Properties: 
-    Name: 'hot-shard-data-stream'
-    RetentionPeriodHours: 24
-    ShardCount: 4
+  KinesisDataStream:
+    Type: AWS::Kinesis::Stream
+    Properties: 
+      Name: 'hot-shard-data-stream'
+      RetentionPeriodHours: 24
+      ShardCount: 4
 
   # Cloud9
   Cloud9:
@@ -23,3 +24,9 @@ Resources:
           "RepositoryUrl" : 'https://github.com/ev2900/Kinesis_Data_Stream_Monitoring.git'
         }
       ]
+
+# Outputs for ease of use
+Outputs:
+  KinesisDataStreamName:
+    Description: 'Name of kinesis data stream'
+    Value: !Ref KinesisDataStream
