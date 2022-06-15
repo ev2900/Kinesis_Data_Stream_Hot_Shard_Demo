@@ -1,3 +1,0 @@
-// Run from the CLI 
-
-aws kinesis describe-stream --stream-name <kinesis_data_stream_name>
