@@ -13,4 +13,11 @@ The CloudFormation will deploy the following architecture
 
 2. Enable enhanced shard-level metrics on the Kinesis data stream
 
-*Instructions*
+* Navigate to the [Kinesis Data Stream Console](https://us-east-1.console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/list)
+* Click on *hot-shard-data-stream*
+* Navigate to the *Configuration* tab
+* Enable *Enhanced (shard-level) metrics*
+
+3. Send data to Kinesis via. Python scripts in Cloud9
+
+4. Deploy CloudWatch dashboard
