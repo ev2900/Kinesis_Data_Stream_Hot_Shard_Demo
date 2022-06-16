@@ -9,7 +9,7 @@ A demo that will intially deploy a Kinesis data stream with 4 shards and sample 
 
 The CloudFormation will deploy the following architecture
 
-<img width="700" alt="OpenSearch_demo_VPC_Architecture" src="https://github.com/ev2900/Kinesis_Data_Stream_Hot_Shard_Demo/blob/main/Architecture/architecture-diagram.png">
+<img width="400" alt="OpenSearch_demo_VPC_Architecture" src="https://github.com/ev2900/Kinesis_Data_Stream_Hot_Shard_Demo/blob/main/Architecture/architecture-diagram.png">
 
 2. Enable enhanced shard-level metrics on the Kinesis data stream
 
