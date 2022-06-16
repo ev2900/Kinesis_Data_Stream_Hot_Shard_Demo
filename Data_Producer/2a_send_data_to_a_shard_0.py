@@ -15,11 +15,13 @@ import time
 import random
 
 # Configure a permanent session
+'''
 client = boto3.client(
 	'kinesis',
 	aws_access_key_id="<access_key_id>",
     aws_secret_access_key="<secret_key_id>"
 )
+'''
 
 # Set hash value for messages
 hashkeyvalue = "1"
