@@ -5,7 +5,7 @@ A demo that will intially deploy a Kinesis data stream with 4 shards and sample 
 
 1. Deploy CloudFormation for Kinesis + Cloud9
 
-*Cloudformation button*
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)]()
 
 The CloudFormation will deploy the following architecture
 
