@@ -21,6 +21,6 @@ The CloudFormation will deploy the following architecture
 3. Send data to Kinesis via. Python scripts in Cloud9
 * Navigate to the [Cloud9 console](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1#)
 * Click on the *kinesis-cloud9* enviorment
-* Execute ``` ```
+* Execute ```python Kinesis_Data_Stream_Monitoring/Data_Producer/1_get_HashKeyRange_for_each_shard.py```
 
 4. Deploy CloudWatch dashboard
