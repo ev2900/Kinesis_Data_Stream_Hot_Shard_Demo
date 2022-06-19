@@ -24,3 +24,5 @@ The CloudFormation will deploy the following architecture
 * Execute ```python Kinesis_Data_Stream_Monitoring/Data_Producer/1_get_HashKeyRange_for_each_shard.py```
 
 4. Deploy CloudWatch dashboard
+
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)]()
