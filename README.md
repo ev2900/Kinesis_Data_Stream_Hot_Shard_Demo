@@ -16,13 +16,21 @@ The CloudFormation will deploy the following architecture
 * Navigate to the [Kinesis Data Stream Console](https://us-east-1.console.aws.amazon.com/kinesis/home?region=us-east-1#/streams/list)
 * Click on *hot-shard-data-stream*
 * Navigate to the *Configuration* tab
-* Enable *Enhanced (shard-level) metrics*
+* Enable all *Enhanced (shard-level) metrics*
 
 3. Send data to Kinesis via. Python scripts in Cloud9
 * Navigate to the [Cloud9 console](https://us-east-1.console.aws.amazon.com/cloud9/home?region=us-east-1#)
 * Click on the *kinesis-cloud9* enviorment
-* Execute ```python Kinesis_Data_Stream_Monitoring/Data_Producer/1_get_HashKeyRange_for_each_shard.py```
+* Execute ```python Kinesis_Data_Stream_Monitoring/Data_Producer/1_get_HashKeyRange_for_each_shard.py``` the output will provide the start and end hashkey for each shard. Copy these values down
+* The ```Kinesis_Data_Stream_Monitoring/Data_Producer/``` folder has 4 python files named ```send_data_to_a_shard_``` ... update the variable of the ```hashkeyvalue``` to a value between the start and end range for the shard each script is associate with
+* Run each script in a seperate Cloud9 terminal
+  * ```python Kinesis_Data_Stream_Monitoring/Data_Producer/2a_send_data_to_a_shard_0.py```
+  * ```python Kinesis_Data_Stream_Monitoring/Data_Producer/2b_send_data_to_a_shard_1.py```
+  * ```python Kinesis_Data_Stream_Monitoring/Data_Producer/2c_send_data_to_a_shard_2.py```
+  * ```python Kinesis_Data_Stream_Monitoring/Data_Producer/2d_send_data_to_a_shard_3.py```   
 
 4. Deploy CloudWatch dashboard
+
+The CloudFormation will deploy a CloudWatch dashboard
 
 [![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)]()
