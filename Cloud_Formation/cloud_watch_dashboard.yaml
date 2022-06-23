@@ -6,4 +6,26 @@ Resources:
     Type: AWS::CloudWatch::Dashboard
     Properties:
       DashboardName: kinesis-per-shard-metrics
-      DashboardBody: '{"widgets":[]}'
+      DashboardBody: '{
+          "widgets": [
+            {
+              "type":"metric",
+              "x":0,
+              "y":0,
+              "width":14,
+              "height":10,
+              "properties":{
+                "metrics":[
+                  ["AWS/Kinesis", "IncomingRecords", "StreamName", "hot-shard-data-stream", "ShardId", "shardId-000000000000"],
+                  ["AWS/Kinesis", "IncomingRecords", "StreamName", "hot-shard-data-stream", "ShardId", "shardId-000000000001"],
+                  ["AWS/Kinesis", "IncomingRecords", "StreamName", "hot-shard-data-stream", "ShardId", "shardId-000000000002"],
+                  ["AWS/Kinesis", "IncomingRecords", "StreamName", "hot-shard-data-stream", "ShardId", "shardId-000000000003"]
+                ],
+                "period":60,
+                "stat":"Maximum",
+                "region":"us-east-1",
+                "title":"Number of Messages per Shard"
+              }
+            }
+          ]
+        }'
