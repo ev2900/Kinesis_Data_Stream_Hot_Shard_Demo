@@ -33,4 +33,4 @@ The CloudFormation will deploy the following architecture
 
 The CloudFormation will deploy a CloudWatch dashboard
 
-[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)]()
+[![Launch CloudFormation Stack](https://sharkech-public.s3.amazonaws.com/misc-public/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=cloudwatch-dashboard&templateURL=https://sharkech-public.s3.amazonaws.com/misc-public/cloud_watch_dashboard.yaml)
