@@ -24,7 +24,7 @@ client = boto3.client(
 '''
 
 # Set hash value for messages
-hashkeyvalue = "1"
+hashkeyvalue = "255211775190703847597530955573826158593"
 
 # Create a kinesis client
 client = boto3.client('kinesis')
@@ -50,7 +50,7 @@ for message in range(0, numberOfMessagesToSend):
 		StreamName = kinesisDataStreamName,
 		Data = json.dumps(messageBody),
 		PartitionKey = str(hash(range(0,1))),
-		ExplicitHashKey = hashkeyvalue # shard 0 | HOT SHARD
+		ExplicitHashKey = hashkeyvalue # shard 3
 	)
 
 	print("Message # " + str(counter) + " sent to " + str(response['ShardId']))
