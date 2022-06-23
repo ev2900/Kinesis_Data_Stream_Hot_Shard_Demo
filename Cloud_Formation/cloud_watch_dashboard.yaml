@@ -22,7 +22,7 @@ Resources:
                   ["AWS/Kinesis", "IncomingRecords", "StreamName", "hot-shard-data-stream", "ShardId", "shardId-000000000003"]
                 ],
                 "period":60,
-                "stat":"Maximum",
+                "stat":"Sum",
                 "region":"us-east-1",
                 "title":"Number of Messages per Shard"
               }
