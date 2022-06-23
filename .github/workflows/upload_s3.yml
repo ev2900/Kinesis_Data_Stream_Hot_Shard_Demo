@@ -28,6 +28,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           
-      - name: Upload OpenSearch_demo.yaml to S3
+      - name: Upload kinesis_Cloud9.yaml to S3
         run: aws s3 cp /home/runner/work/Kinesis_Data_Stream_Hot_Shard_Demo/Kinesis_Data_Stream_Hot_Shard_Demo/Cloud_Formation/kinesis_Cloud9.yaml s3://sharkech-public/misc-public/kinesis_Cloud9.yaml
+        
+      - name: Upload cloud_watch_dashboard.yaml  to S3
+        run: aws s3 cp /home/runner/work/Kinesis_Data_Stream_Hot_Shard_Demo/Kinesis_Data_Stream_Hot_Shard_Demo/Cloud_Formation/cloud_watch_dashboard.yaml s3://sharkech-public/misc-public/cloud_watch_dashboard.yaml
         
