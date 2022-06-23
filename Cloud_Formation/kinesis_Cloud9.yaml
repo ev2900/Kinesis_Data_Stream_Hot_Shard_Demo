@@ -24,9 +24,3 @@ Resources:
           "RepositoryUrl" : 'https://github.com/ev2900/Kinesis_Data_Stream_Monitoring.git'
         }
       ]
-
-# Outputs for ease of use
-Outputs:
-  KinesisDataStreamName:
-    Description: 'Name of kinesis data stream'
-    Value: !Ref KinesisDataStream

@@ -1,0 +1,8 @@
+Description: CloudWatch dashboard
+
+Resources:
+  # CloudWatch dashboard
+  CloudWatchDashboard:
+    Type: AWS::CloudWatch::Dashboard
+    Properties:
+      DashboardName": "kinesis-per-shard-metrics"
