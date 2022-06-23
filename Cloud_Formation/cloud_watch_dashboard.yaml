@@ -5,4 +5,4 @@ Resources:
   CloudWatchDashboard:
     Type: AWS::CloudWatch::Dashboard
     Properties:
-      DashboardName": "kinesis-per-shard-metrics"
+      DashboardName: "kinesis-per-shard-metrics"
