@@ -1,6 +1,6 @@
 # Kinesis Data Stream CloudWatch
 
-<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-0-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-191-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-070-green">
+<img width="275" alt="map-user" src="https://img.shields.io/badge/cloudformation template deployments-0-blue"> <img width="85" alt="map-user" src="https://img.shields.io/badge/views-191-green"> <img width="125" alt="map-user" src="https://img.shields.io/badge/unique visits-072-green">
 
 A demo that will intially deploy a Kinesis data stream with 4 shards and sample python scripts run in Cloud9 that purposly send a higher volume of messages to a single shard on Kinesis. This sets up a scenario with where a Kinesis data stream has a *hot* shard. Subseqently you enable enhanced monitoring on the Kinesis data stream and deploy a CloudWatch dashboard to identify the *hot* shard
 
